@@ -178,7 +178,7 @@ Four digests have been computed for this ISO. The hash functions used, in order 
 
 (Notice that the outputs match the values from the `.DIGESTS` file.)
 
-However, it is possible that an attacker replaced `Qubes-R2-x86_64-DVD.iso` with a malicious ISO, computed the hash values for that ISO, and replaced the values in `Qubes-R2-x86_64-DVD.iso.DIGESTS` with his own set of values. Therefore, ideally, we should also verify the authenticity of the listed hash values. Since `Qubes-R2-x86_64-DVD.iso.DIGESTS` is a clearsigned PGP file, we can use `gpg` to verify it from the command line:
+However, it is possible that an attacker replaced `Qubes-R2-x86_64-DVD.iso` with a malicious ISO, computed the hash values for that ISO, and replaced the values in `Qubes-R2-x86_64-DVD.iso.DIGESTS` with his own set of values. Therefore we must also verify the authenticity of the listed hash values. Since `Qubes-R2-x86_64-DVD.iso.DIGESTS` is a clearsigned PGP file, we can use `gpg` to verify it from the command line:
 
     $ gpg -v --verify Qubes-R2-x86_64-DVD.iso.DIGESTS
     gpg: armor header: Hash: SHA256
